@@ -1,7 +1,8 @@
 <div class=container>
   <h1><%= @list.name %></h1>
   <% @list.bookmarks.each do |bookmark| %>
-    <%= bookmark.movie.title %>
-    <%= bookmark.comment %>
+    <div class="card">
+      <p><%= bookmark.comment %></p>
+    </div>
   <% end %>
 </div>
