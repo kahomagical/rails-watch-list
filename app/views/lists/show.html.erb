@@ -1,8 +1,13 @@
 <div class=container>
   <h1><%= @list.name %></h1>
-  <% @list.bookmarks.each do |bookmark| %>
-    <div class="card">
-      <p><%= bookmark.comment %></p>
-    </div>
-  <% end %>
+  <div class="card">
+    <% @list.bookmarks.each do |bookmark| %>
+      <p><%= bookmark.name %></p>
+      <div
+        class="card-category"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "Back to Top", root_path %>
 </div>
